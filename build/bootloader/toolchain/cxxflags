@@ -1,4 +1,0 @@
-"-specs=E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader/specs/picolibc.specs"
--march=rv32imc_zicsr_zifencei
--mtune=esp-base
--fno-rtti
