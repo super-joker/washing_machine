@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/CMakeFiles/bootloader
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/CMakeFiles/bootloader.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/CMakeFiles/bootloader-complete.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,0 +1,10 @@
+Command: cmake -G Ninja -B E:\WorkSpace\Code\01_ESP32\02_washing_machine_v01_20261021\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=D:\Espressif\tools\python\v6.1\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=True E:\WorkSpace\Code\01_ESP32\02_washing_machine_v01_20261021
+NOTE: D:/esp/v6.1/esp-idf/components/bootloader/Kconfig.projbuild:383: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+NOTE: D:/esp/v6.1/esp-idf/components/bootloader/Kconfig.projbuild:423: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+NOTE: D:/esp/v6.1/esp-idf/components/esp_hw_support\./lowpower/port/esp32p4/Kconfig.p4_rev3_mspi_workaround:6: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+NOTE: D:/esp/v6.1/esp-idf/components/esp_mm/Kconfig:20: Deprecation notice: hex literal '0' without '0x' prefix detected. In the next major version, hex literals will be required to have a '0x' prefix.
+Loading defaults file E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/sdkconfig.defaults...
+Loading defaults file E:/WorkSpace/Code/01_ESP32/02_washing_machine_v01_20261021/sdkconfig.defaults.esp32c3...
+NOTE: Kconfig parser version: 1
+NOTE: Kconfig defaults policy: use sdkconfig
+NOTE: Status: Finished successfully

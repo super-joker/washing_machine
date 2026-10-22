@@ -1,0 +1,19 @@
+{
+	"idf.currentSetup": "D:\\esp\\v6.1\\esp-idf",
+	"idf.flashType": "UART",
+	"idf.port": "COM4",
+	"idf.monitorPort": "COM4",
+	"C_Cpp.default.compileCommands": [
+		"${workspaceFolder}/build/compile_commands.json"
+	],
+	"C_Cpp.default.compilerPath": "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20251204/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe",
+	"idf.customExtraVars": {
+		"IDF_TARGET": "esp32c3"
+  },
+  "clangd.path": "D:\\Espressif\\tools\\esp-clangd\\esp-21.1.3_20260408\\esp-clangd\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=e:\\WorkSpace\\Code\\01_ESP32\\02_washing_machine_v01_20261021\\build"
+  ]
+}
