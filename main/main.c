@@ -1,9 +1,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "driver/ledc.h"
 #include "esp_log.h"
 #include "button.h"
-#include "led.h"
+#include "seg.h"
 
 static const char *TAG = "main";
 
@@ -30,32 +29,26 @@ static void poll_button(const char *name, gpio_num_t gpio)
     }
 }
 
-/* pwm_fade_to() 会等到这一程渐变结束。放在单独任务里，才不会挡住按键轮询。 */
-static void breathing_led_task(void *arg)
-{
-    (void)arg;
-
-    while (1) {
-        pwm_fade_to(PWM_FULL_DUTY);
-        pwm_fade_to(0);
-        vTaskDelay(pdMS_TO_TICKS(PWM_DARK_HOLD_MS));
-    }
-}
-
 void app_main(void)
 {
-    pwm_init();
+    int value = 0;
+    int elapsed_ms = 0;
+
     button_init();
-
-    if (xTaskCreate(breathing_led_task, "breath_led", 3072, NULL, 4, NULL) != pdPASS) {
-        ESP_LOGE(TAG, "创建呼吸灯任务失败");
-    }
-
-    ESP_LOGI(TAG, "按键测试: 左键 GPIO%d, 右键 GPIO%d", BUTTON_LEFT, BUTTON_RIGHT);
+    seg_init();
+    seg_show_number(value);
+    ESP_LOGI(TAG, "数码管测试，左键 GPIO%d，右键 GPIO%d", BUTTON_LEFT, BUTTON_RIGHT);
 
     while (1) {
         poll_button("左键", BUTTON_LEFT);
         poll_button("右键", BUTTON_RIGHT);
         vTaskDelay(pdMS_TO_TICKS(20));
+
+        elapsed_ms += 20;
+        if (elapsed_ms >= 500) {
+            elapsed_ms = 0;
+            value = (value + 1) % 10000;
+            seg_show_number(value);
+        }
     }
 }
