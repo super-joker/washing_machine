@@ -951,6 +951,21 @@ CONFIG_EFUSE_MAX_BLK_LEN=256
 # end of eFuse Bit Manager
 
 #
+# ADC and ADC Calibration
+#
+# default:
+# CONFIG_ADC_ONESHOT_CTRL_FUNC_IN_IRAM is not set
+# default:
+# CONFIG_ADC_CONTINUOUS_ISR_IRAM_SAFE is not set
+# default:
+# CONFIG_ADC_CONTINUOUS_FORCE_USE_ADC2_ON_C3_S3 is not set
+# default:
+# CONFIG_ADC_ONESHOT_FORCE_USE_ADC2_ON_C3 is not set
+# default:
+# CONFIG_ADC_ENABLE_DEBUG_LOG is not set
+# end of ADC and ADC Calibration
+
+#
 # Common ESP-related
 #
 # default:
@@ -1235,6 +1250,15 @@ CONFIG_PM_ESP_SLEEP_POWER_DOWN_CPU=y
 #
 # ESP PSRAM
 #
+
+#
+# ESP Ringbuf
+#
+# default:
+# CONFIG_RINGBUF_IN_IRAM is not set
+# default:
+# CONFIG_RINGBUF_PLACE_ISR_FUNCTIONS_INTO_FLASH is not set
+# end of ESP Ringbuf
 
 #
 # ESP-ROM
@@ -2111,6 +2135,44 @@ CONFIG_SPI_FLASH_SUPPORT_TH_CHIP=y
 # default:
 CONFIG_SPI_FLASH_ENABLE_ENCRYPTED_READ_WRITE=y
 # end of SPI Flash driver
+
+#
+# IoT Button
+#
+# default:
+CONFIG_BUTTON_PERIOD_TIME_MS=5
+# default:
+CONFIG_BUTTON_DEBOUNCE_TICKS=2
+# default:
+CONFIG_BUTTON_SHORT_PRESS_TIME_MS=180
+# default:
+CONFIG_BUTTON_LONG_PRESS_TIME_MS=1500
+# default:
+CONFIG_BUTTON_LONG_PRESS_HOLD_SERIAL_TIME_MS=20
+# default:
+CONFIG_ADC_BUTTON_MAX_CHANNEL=3
+# default:
+CONFIG_ADC_BUTTON_MAX_BUTTON_PER_CHANNEL=8
+# default:
+CONFIG_ADC_BUTTON_SAMPLE_TIMES=1
+# end of IoT Button
+
+#
+# CMake Utilities
+#
+# default:
+# CONFIG_CU_RELINKER_ENABLE is not set
+# default:
+# CONFIG_CU_DIAGNOSTICS_COLOR_NEVER is not set
+# default:
+CONFIG_CU_DIAGNOSTICS_COLOR_ALWAYS=y
+# default:
+# CONFIG_CU_DIAGNOSTICS_COLOR_AUTO is not set
+# default:
+# CONFIG_CU_GCC_LTO_ENABLE is not set
+# default:
+# CONFIG_CU_GCC_STRING_1BYTE_ALIGN is not set
+# end of CMake Utilities
 # end of Component config
 
 # default:
