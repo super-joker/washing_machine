@@ -180,6 +180,34 @@ void seg_show_number(int value)
     }
 }
 
+void seg_show_mmss(uint8_t minutes, uint8_t seconds)
+{
+    if (minutes > 99) {
+        minutes = 99;
+    }
+    if (seconds > 59) {
+        seconds = 59;
+    }
+    seg_set_segments(0, s_font[minutes / 10]);
+    seg_set_segments(1, s_font[minutes % 10]);
+    seg_set_segments(2, s_font[seconds / 10]);
+    seg_set_segments(3, s_font[seconds % 10]);
+}
+
+void seg_show_zeros(void)
+{
+    for (uint8_t i = 0; i < 4; i++) {
+        seg_set_segments(i, s_font[0]);
+    }
+}
+
+void seg_show_dots(void)
+{
+    for (uint8_t i = 0; i < 4; i++) {
+        seg_set_segments(i, SEG_DP);
+    }
+}
+
 void seg_clear(void)
 {
     for (uint8_t i = 0; i < 4; i++) {

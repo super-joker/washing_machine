@@ -12,7 +12,7 @@
 #define BUTTON_DISABLE_PULL    false
 /* 按住超过该时间上报长按。单击会在松手后再等 BUTTON_SHORT_PRESS_MS 才确认，
  * 这段时间也是双击的最大间隔。 */
-#define BUTTON_LONG_PRESS_MS   1000
+#define BUTTON_LONG_PRESS_MS   2000
 #define BUTTON_SHORT_PRESS_MS  400
 
 typedef enum {
