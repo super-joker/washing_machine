@@ -1,6 +1,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_log.h"
+#include "esp_system.h"
 #include "button.h"
 #include "motor.h"
 #include "seg.h"
@@ -105,7 +106,10 @@ static void enter_round_end(void)
     seg_show_dots();
     s_mode = MODE_ROUND_END;
     s_shown_sec = UINT32_MAX;
-    ESP_LOGI(TAG, "8 分钟到，暂停");
+    ESP_LOGI(TAG, "8 分钟到，复位");
+    /* 先停电机再复位，避免复位瞬间半桥引脚状态不定。 */
+    vTaskDelay(pdMS_TO_TICKS(200));
+    esp_restart();
 }
 
 static void start_round(void)
